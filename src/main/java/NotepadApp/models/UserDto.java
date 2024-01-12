@@ -2,13 +2,24 @@ package NotepadApp.models;
 
 public class UserDto {
 
+    String userName;
+
+    public UserDto() {
+    }
+
     String email;
 
     public UserDto(String email) {
         this.email = email;
     }
 
-    String firstName;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getEmail() {
         return email;
@@ -17,23 +28,4 @@ public class UserDto {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    String lastName;
-
 }

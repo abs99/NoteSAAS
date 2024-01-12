@@ -1,9 +1,8 @@
 package NotepadApp.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class User {
@@ -16,6 +15,7 @@ public class User {
     String password;
 
     String email;
+//    Set<Note> notes;
 
     public Integer getId() {
         return Id;
