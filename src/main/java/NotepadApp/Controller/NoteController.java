@@ -23,11 +23,12 @@ public class NoteController {
         NoteDto newNote  = service.createNote(noteDto,userId);
         return new ResponseEntity<>(newNote, HttpStatus.CREATED);
     }
-//    @GetMapping
-//    @RequestMapping("/user/{userId}")
-//    public ResponseEntity<List<NoteDto>> getNotesForUser(@PathVariable Integer userId){
-//
-//    }
+    @GetMapping
+    @RequestMapping("/user/{userId}")
+    public ResponseEntity<List<NoteDto>> getNotesForUser(@PathVariable Integer userId){
+        List<NoteDto> notes =  service.getNotesForUser(userId);
+        return  new ResponseEntity<>(notes,HttpStatus.OK);
+    }
     @GetMapping
     @RequestMapping("/{noteId}")
     public ResponseEntity<NoteDto> getNote(@PathVariable Integer noteId){
